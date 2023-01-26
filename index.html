@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>CSS Grid Example</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
+
+    <!-- Google Fonts used in Metrolics layout -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -24,25 +24,74 @@
 
 <body>
 
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <div class="">
+        <div class="row">
+            <div class="col">
+                <img srcset="img/s_header.webp 900w, img/header.webp 2000w" sizes="(max-width: 39.9375rem) 480px,
+                       2000px" src="img/header.webp" alt="header image" />
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row">
+            <div class="col">
+                <picture>
+                    <source media="(max-width: 39.9375rem)" srcset="img/s_img01_900.webp" />
+                    <source media="(max-width: 64rem)" srcset="img/m_img01_1000.webp" />
+                    <!-- <source media="(min-width: 64rem)" srcset="img/l_img01_2000.webp" /> -->
+                    <img src="img/l_img01_2000.webp" alt="Chris standing up holding his daughter Elva" />
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row m-col-2 l-col-4">
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="row m-col-3 l-col-2">
+            <div class="col m-row-span">
+                <div class="grid m-col-3">
+                    <div class="col">
+                        <h1>Grid</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Grid</h1>
+                    </div>
+                    <div class="col">
+                        <h1>Grid</h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+            <div class="col">
+                <h1>CSS Grid</h1>
+            </div>
+        </div>
+    </div>
+
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function() {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('set', 'transport', 'beacon');
-        ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
