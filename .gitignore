@@ -6,3 +6,5 @@ dist
 .cache
 .history
 .DS_Store
+_pgbackup
+_pginfo
